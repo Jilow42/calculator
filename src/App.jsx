@@ -32,7 +32,7 @@ class App extends Component {
           <ActionBtn handleAction={() => this.setState({ result: (this.state.result) })}> +- </ActionBtn>
           {/* manque d'un peu de temps */}
           <ActionBtn handleAction={() => this.setState({ result: (this.state.result) })}> % </ActionBtn>
-          <ActionBtn handleAction={() => this.setState({ result: math.divide(this.state.result) })}> / </ActionBtn>
+          <Button handleClick={this.addInput}> / </Button>
         </div>
         <div className='row' >
           <Button handleClick={this.addInput}> 7 </Button>
