@@ -1,35 +1,35 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Result from './components/Result';
 import ClearBtn from './components/ClearBtn';
+import * as math from 'mathjs';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      result:""
+      result: ""
     };
   }
 
   addInput = val => {
-    this.setState({result:this.state.result + val});
+    this.setState({ result: this.state.result + val });
   }
-  handleCalc = () =>{
-    if (this.state.result !== '') {
-      var
-    }
-  }
+  handleCalc = () => {
+    this.setState({ result: math.evaluate(this.state.result) })
+  };
 
   render() {
     return <div className='App' >
       <div className='calculator' >
+        console.log({math.evaluate("3+5")});
+         
         <Result result={this.state.result}></Result>
         <div className='row' >
-          <ClearBtn handleAC={() => this.setState({result:""})} >AC</ClearBtn>
-          {/* need more time */}
-          <Button handleClick={this.addInput}> +- </Button> 
+          <ClearBtn handleAC={() => this.setState({ result: "" })} >AC</ClearBtn>
+          <Button handleClick={this.addInput}> +- </Button>
           <Button handleClick={this.addInput}> % </Button>
           <Button handleClick={this.addInput}> / </Button>
         </div>
@@ -54,7 +54,7 @@ class App extends Component {
         <div className='row' >
           <Button handleClick={this.addInput}> 0 </Button>
           <Button handleClick={this.addInput}> . </Button>
-          <Button handleClick={() => this.handleCalc }> = </Button>
+          <Button handleClick={() => this.handleCalc()}> = </Button>
         </div>
       </div>
     </div>
