@@ -1,5 +1,5 @@
 # Calculator A React App
-This is an exercice that take place in My DigitalSchool given by CappyWeb.
+This is an exercice that take place in My DigitalSchool given by CappyWeb teacher.
 
 I have use react app in order to start.
 
