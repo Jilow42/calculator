@@ -1,7 +1,8 @@
 # Calculator A React App
 This is an exercice that take place at My Digital School Paris and was given by CappyWeb teacher.
 
-I have use react app in order to start.
+I have use react app in order to start. 
+I also use mathjs to handle mathemetics operations.
 
 Author : Florian Lina
 git : https://github.com/Jilow42/calculator
