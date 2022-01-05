@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Result from './components/Result';
-import ClearBtn from './components/ClearBtn';
+import ActionBtn from './components/ActionBtn';
+import ReverseBtn from './components/ReverseBtn';
 import * as math from 'mathjs';
 
 class App extends Component {
@@ -24,20 +25,20 @@ class App extends Component {
   render() {
     return <div className='App' >
       <div className='calculator' >
-        console.log({math.evaluate("3+5")});
-         
         <Result result={this.state.result}></Result>
         <div className='row' >
-          <ClearBtn handleAC={() => this.setState({ result: "" })} >AC</ClearBtn>
-          <Button handleClick={this.addInput}> +- </Button>
-          <Button handleClick={this.addInput}> % </Button>
-          <Button handleClick={this.addInput}> / </Button>
+          <ActionBtn handleAction={() => this.setState({ result: "" })} >AC</ActionBtn>
+          {/* manque d'un peu de temps */}
+          <ActionBtn handleAction={() => this.setState({ result: (this.state.result) })}> +- </ActionBtn>
+          {/* manque d'un peu de temps */}
+          <ActionBtn handleAction={() => this.setState({ result: (this.state.result) })}> % </ActionBtn>
+          <ActionBtn handleAction={() => this.setState({ result: math.divide(this.state.result) })}> / </ActionBtn>
         </div>
         <div className='row' >
           <Button handleClick={this.addInput}> 7 </Button>
           <Button handleClick={this.addInput}> 8 </Button>
           <Button handleClick={this.addInput}> 9 </Button>
-          <Button handleClick={this.addInput}> x </Button>
+          <Button handleClick={this.addInput}> * </Button>
         </div>
         <div className='row' >
           <Button handleClick={this.addInput}> 4 </Button>
@@ -57,7 +58,7 @@ class App extends Component {
           <Button handleClick={() => this.handleCalc()}> = </Button>
         </div>
       </div>
-    </div>
+    </div >
   }
 }
 
