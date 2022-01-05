@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Calculator A React App
+This is an exercice that take place in My DigitalSchool given by CappyWeb.
+
+I have use react app in order to start.
+
+Author : Florian Lina
+git : https://github.com/Jilow42/calculator
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
