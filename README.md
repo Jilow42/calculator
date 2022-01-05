@@ -6,6 +6,10 @@ I have use react app in order to start.
 Author : Florian Lina
 git : https://github.com/Jilow42/calculator
 
+To be able to start the app :
+
+### `npm install`
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
