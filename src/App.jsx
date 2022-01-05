@@ -17,7 +17,9 @@ class App extends Component {
     this.setState({result:this.state.result + val});
   }
   handleCalc = () =>{
-    this.setState()
+    if (this.state.result !== '') {
+      var
+    }
   }
 
   render() {
